@@ -117,16 +117,21 @@ Public class StringCalculator {
 2. 빈 문자열 또는 null 값을 입력: 0 반환
 
 ```
-Public class StringCalculator {
+Public class StringCalculatorTest {
 
-	Int add(String text) {
-
-		if (text == null || text.length == 0) {
-		return 0;
-		}
-
-		return 0;
-
-	}
+    private StringCalculator cal;
+    
+    @Before
+    public void setup() {
+        cal = new StringCalculator();
+    }
+    
+    @Test
+    public void add_null() {
+    
+        assertEquals(0, cal.add(null));
+        assetEquals(0, cal.add(""));
+    }
+    
 }
 ```
